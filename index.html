@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WILL YOU BE MY VALENTINE?</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; margin-top:100px; background-color: #b92727;">
+
+<h1 style="font-size:50px; color: antiquewhite; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">WILL YOU BE MY VALENTINE?</h1>
+
+<div style="display:flex; justify-content:center; gap:50px;">
+
+  <!-- BUTTON 1 -->
+  <div>
+    <button onclick="showWithCooldown()" 
+    style="cursor:pointer; font-size:18px; background:#4CAF50; color:white; padding:10px; border-radius:8px; border:none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    SIGE PO 😍
+    </button>
+
+    <br><br>
+
+    <img id="img1" src="ok po.jpg" width="250" 
+    style="border-radius:10px; display:none;">
+  </div>
+
+  <!-- BUTTON 2 -->
+  <div>
+    <button id="noBtn"
+    style="cursor:pointer; font-size:18px; background:#ff0000; color:white; padding:10px; border-radius:8px; border:none; position:absolute; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    AYOKO!!
+    </button>
+  </div>
+
+</div>
+
+<script>
+
+function showWithCooldown() {
+  const img = document.getElementById("img1");
+
+  img.style.display = "block";
+
+  setTimeout(() => {
+    img.style.display = "none";
+  }, 2000); 
+}
+
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("click", function() {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+</script>
+
+</body>
+</html>
